@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+var range = prompt('Enter a number >1', '');
+var i, n;
+var arr = [];
+
+nextN:
+for (var i = 2; i <= range; i++) {
+
+    for (var n = 2; n < i; n++) {
+      if (i % n == 0) continue nextN 
+    }
+arr.push(n);
+}
+
+    alert(arr); 
+
+
+
+
+</script>
+
+
+	
+</body>
+</html>

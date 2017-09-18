@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+
+var mn = prompt('Enter min', '');
+var mx = prompt('Enter max', '');
+var st = prompt('Enter step', '');
+
+
+min = parseInt(mn, 10);
+max = parseInt(mx, 10);
+step = parseInt(st, 10);
+
+var arr = [];
+
+
+
+function specifyRange(min, max, step) {
+
+	for (var i = min; i <= max; i++) {
+	if (i % step == 0) {arr.push(i);}
+     }
+    }
+
+specifyRange(min, max, step);
+
+console.log(arr);
+
+
+</script>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+var x;
+
+
+
+function square(x) {if (isNaN(x) == false) 
+	return x * x;
+ 
+} 
+
+//else {
+  //alert( 'You have entered other symbol!' ); 
+//}
+//}
+//square(n)
+
+ //alert(N);
+
+
+ var arr1 = new Array (2);
+
+for (var i = 0; i < arr1.length; i++)
+   arr1 [i] = prompt ('Input array element', '');
+ 
+alert(arr1);
+
+
+
+function map(square, arr) {
+
+	var arr2 = new Array (arr.length);
+
+	for (i=0; i<arr.length; i++) {
+
+		arr2[i] = square(arr1[i])
+	}
+	return arr2
+
+}	
+
+
+				
+
+map(square, arr1);
+
+alert(map(square, arr1));
+
+
+
+
+
+
+</script>
+
+
+	
+</body>
+</html>

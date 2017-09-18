@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+var login = prompt('Enter your Login?', '');
+
+if (login == 'admin') {
+	var password = prompt('Enter password', '');
+
+	if (password == 'sword') {
+		alert('Welcome!');
+	} else if (password != 'sword') {
+		alert('Wrong password!!!!');
+	} else {
+		alert('Enter is denied');
+	}
+}else if (login != 'admin') {
+		alert('Enter is denied');
+	} else {
+		alert('I dont know you');
+	}
+
+
+</script>
+
+
+	
+</body>
+</html>

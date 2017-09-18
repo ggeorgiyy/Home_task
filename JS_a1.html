@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+var alphabet = new Array (32);
+
+var i;
+
+for (i=0; i< 32; i++) {
+  	  alphabet[i] = String.fromCharCode(1072 + i);
+   	}
+
+
+
+
+var str = alphabet[7].toUpperCase() + alphabet[13] + alphabet[0] + alphabet[5] + alphabet[18] + ' ' + alphabet[11] + alphabet[8]+ alphabet[24] + alphabet[28] +  ' ' + alphabet[2] + alphabet[16] + alphabet[5] + alphabet[12] + alphabet[31] + ','+ '\n' + alphabet[17].toUpperCase() + alphabet[10] + alphabet[14] + alphabet[11] + alphabet[28] + alphabet[10] + alphabet[14] + ' ' + alphabet[4] + alphabet[14] + alphabet[16] + alphabet[14] + alphabet[3] + ' ' + alphabet[12] + alphabet[13] + alphabet[5] + ' ' + alphabet[15] + alphabet[16] + alphabet[14] + alphabet[9] + alphabet[18] + alphabet[8] + ',' + '\n' + alphabet[23].toUpperCase() + alphabet[18] + alphabet[14] + alphabet[1] +  ' ' + alphabet[4] + alphabet[14] + alphabet[17] + alphabet[18] + alphabet[8] + alphabet[23] + alphabet[28] + ' ' + alphabet[17] + alphabet[23] + alphabet[0] + alphabet[17] + alphabet[18] + alphabet[28] + alphabet[31];
+alert(str);
+
+
+
+</script>
+
+
+	
+</body>
+</html>
