@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+
+
+////1/////
+
+
+str = 'https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766';
+
+const getHostName = function (url) {
+	let index = str.indexOf('://');
+	let newStr = str.substr(index + 2);
+	let arr = newStr.split('/');
+	let result = arr[1];
+	console.log(result);
+
+}
+
+
+getHostName('https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766');
+
+///2////
+
+str = 'https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766';
+
+const getPort = function (url) {
+	let index = str.indexOf('://');
+	let newStr = str.substr(index + 2);
+	let arr = newStr.split('/');
+	let result = arr[0];
+	console.log(result);
+
+}
+
+
+getPort('https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766');
+
+///////3//////////
+
+str = 'https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766';
+
+const getProtocol = function (url) {
+	let arr = str.split('/');
+	let result = arr[0];
+	console.log(result);
+
+}
+
+
+getProtocol('https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766');
+
+////4////////
+
+str = 'https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766';
+
+const getQueryVars = function (url) {
+	let index = str.indexOf('?');
+	let newStr = str.substr(index);
+	console.log(newStr);
+
+}
+
+getQueryVars('https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766');
+
+
+////////////5//////////////
+
+str = 'https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766';
+
+const getPathName = function (url) {
+	let index = str.indexOf('.org/');
+	let newStr = str.substr(index + 4);
+	let arr = newStr.split('?');
+	console.log(arr[0]);
+
+}
+
+getPathName('https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766');
+
+</script>
+
+
+	
+</body>
+</html>
