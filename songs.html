@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+
+////Напишите функцию, которая выводит в HTML документ нумерованный список песен:
+
+var playList = [
+ {
+ author: "LED ZEPPELIN",
+ song:"STAIRWAY TO HEAVEN"
+ },
+ {
+ author: "QUEEN",
+ song:"BOHEMIAN RHAPSODY"
+ },
+ {
+ author: "LYNYRD SKYNYRD",
+ song:"FREE BIRD"
+ },
+ {
+ author: "DEEP PURPLE",
+ song:"SMOKE ON THE WATER"
+ },
+ {
+ author: "JIMI HENDRIX",
+ song:"ALL ALONG THE WATCHTOWER"
+ },
+ {
+ author: "AC/DC",
+ song:"BACK IN BLACK"
+ },
+ {
+ author: "QUEEN",
+ song:"WE WILL ROCK YOU"
+ },
+ {
+ author: "METALLICA",
+ song:"ENTER SANDMAN"
+ }
+];
+
+var List = [];
+var i = 1;
+const songList = function (playList) {
+for (song in playList) {
+	List.push(i++ + '.' + playList[song].song + '\n');
+	}
+}
+
+songList(playList);
+
+alert(List);
+
+</script>
+
+
+	
+</body>
+</html>
