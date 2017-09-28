@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+
+
+<script>
+
+
+const helperUrlParser = function(url) {
+	this.url = url;
+	this.queryVars = {};
+	this.query = '';
+	this.hostName = '';
+
+	this.getPort = {};
+	this.getProtocol = {};
+	this.getPathName = {};
+
+
+
+	this.setQueryVars = function() {
+        let index = this.url.indexOf('?');
+        this.query = this.url.substr(index + 1);
+        let arr = this.query.split('&');
+		let thisQueryVars = this.queryVars;
+        arr.forEach(function(item){
+            let itemProps = item.split('=');
+            thisQueryVars[itemProps[0]] = itemProps[1];
+        });
+    };
+	this.getQueryVars = function() { return this.queryVars; };
+	this.getQuery = function() { return this.query; };
+	this.setHostName = function() {
+        let index = this.url.indexOf('://');
+        let tmp = this.url.slice(index + 3);
+        this.hostName = tmp.split(':')[0];
+    };
+	this.getHostName = function() { return this.hostName; };
+
+	this.getPort = function (url) {
+	let index = str.indexOf('://');
+	let newStr = str.substr(index + 2);
+	let arr = newStr.split('/');
+	let result = arr[0];
+	console.log(result);
+
+}
+this.getPort = function() { return this.getPort; };
+
+this.getProtocol = function (url) {
+	let arr = str.split('/');
+	let result = arr[0];
+	console.log(result);
+
+}
+this.getProtocol = function() { return this.getProtocol; };
+
+this.getPathName = function (url) {
+	let index = str.indexOf('.org/');
+	let newStr = str.substr(index + 4);
+	let arr = newStr.split('?');
+	console.log(arr[0]);
+
+}
+this.getPathName = function() { return this.getPathName; };
+
+	this.setQueryVars();
+	this.setHostName();
+	this.getPort();
+	this.getProtocol();
+	this.getPathName();
+
+}
+
+let Url = new helperUrlParser("https://rutracker.org/forum/topic/viewtopic.php?t=51760387&c=12645&d=1232242134&m=098766");
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+</script>
+
+
+	
+</body>
+</html>
