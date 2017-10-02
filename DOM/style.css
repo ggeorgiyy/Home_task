@@ -1,0 +1,32 @@
+.article {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+
+	width: 474px;
+	height: 505px;
+}
+
+a {
+
+	color: #365899;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+p {
+	    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.38;
+}
+
+.list {
+display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+
+}

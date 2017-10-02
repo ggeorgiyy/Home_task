@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+<div class="page">
+<div class="block">
+	<div class="block__flash block__flash--1"></div>
+	<div class="block__flash block__flash--2"></div>
+	<div class="block__flash block__flash--3"></div>
+	<div class="block__flash block__flash--4"></div>
+</div>
+</div>
+
+<script>
+
+var element = document.getElementsByClassName('block__flash');
+
+var color = [];
+
+color[0] = '#FF0000';
+color[1] = '#32CD32';
+color[2] = '#0000FF';
+color[3] = '#FFFF00';
+
+
+
+
+const flash = function(element, currState, stopOn) {
+    if  (currState) {
+        	element[0].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+        	element[1].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+        	element[2].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+        	element[3].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+
+        } else {
+   
+   			element[0].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+   			element[1].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+        	element[2].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+        	element[3].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+   }
+
+   console.log(element[0].style.backgroundColor);
+
+   if (stopOn > 0) {
+   	setTimeout(function() {
+   		flash(element, !currState, --stopOn);
+   	}, 300);
+   }
+       
+}
+
+flash(element, false, 20);
+
+
+
+
+
+
+</script>
+
+
+	
+</body>
+</html>
+
+
+
+
+  element[0].style.backgroundColor = color[0];
+  
+  element[1].style.backgroundColor = color[1];
+  
+  element[2].style.backgroundColor = color[2];
+  
+  element[3].style.backgroundColor = color[3];
