@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>JS Lesson 2</title>
+</head>
+<body>
+
+<div class="product-page">
+
+<div id="0" class="product">
+	<div class="product__image"><img src="ultimate.png" alt="product"></div>
+	<h2 class="product__name">Ball</h2>
+	<div class="product__description">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa necessitatibus ducimus aperiam eaque dolore asperiores autem facere, eveniet iste id!</div>
+	<div class="product__price">Price 100</div>
+    <input  type="button"  value="Buy now">	
+</div>
+
+<div id="1" class="product">
+	<div class="product__image"><img src="ultimate.png" alt="product">	</div>
+	<h2 class="product__name">Ball</h2>
+	<div class="product__description">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa necessitatibus ducimus aperiam eaque dolore asperiores autem facere, eveniet iste id!</div>
+	<div class="product__price">Price 200</div>
+    <input  type="button"  value="Buy now">	
+</div>
+
+<div id="2" class="product special-offer">
+	<div class="product__image"><img src="ultimate.png" alt="product">	</div>
+	<h2 class="product__name">Ball</h2>
+	<div class="product__description">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa necessitatibus ducimus aperiam eaque dolore asperiores autem facere, eveniet iste id!</div>
+	<div class="product__price">Price 250</div>
+    <input  type="button"  value="Buy now">	
+</div>
+
+<div id="3" class="product">
+	<div class="product__image"><img src="ultimate.png" alt="product">	</div>
+	<h2 class="product__name">Ball</h2>
+	<div class="product__description">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa necessitatibus ducimus aperiam eaque dolore asperiores autem facere, eveniet iste id!</div>
+	<div class="product__price">Price 300</div>
+    <input  type="button"  value="Buy now">	
+</div>
+
+<div id="4" class="product">
+	<div class="product__image"><img src="ultimate.png" alt="product">	</div>
+	<h2 class="product__name">Ball</h2>
+	<div class="product__description">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa necessitatibus ducimus aperiam eaque dolore asperiores autem facere, eveniet iste id!</div>
+	<div class="product__price">Price 400</div>
+    <input  type="button"  value="Buy now">	
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+
+////We create a basket///////
+
+
+
+var basket = document.createElement('div');
+basket.className = 'basket';
+basket.style.width='500px';
+basket.style.height='300px';
+basket.style.background='yellow';
+basket.style.display='none';
+basket.style.margin='auto';
+
+document.body.appendChild(basket);
+
+/////We create a field "Total" and a field with quantity of goods/////
+
+var total = document.createElement('div');
+total.className = 'total';
+total.style.width='400px';
+total.style.height='40px';
+total.style.background='grey';
+total.style.display='none';
+total.style.margin='10px';
+
+document.body.appendChild(basket);
+basket.appendChild(total);
+
+ var title = document.createElement('h2');
+  title.innerHTML = 'Your purchases';
+  title.style.textalign = 'center';
+  basket.appendChild(title);
+
+  ///Get all buttons////
+
+var buttons = document.getElementsByTagName('input');
+let totalPrice = 0;
+let price = 0;
+let priceLast = 0;
+let corb = [];
+var products = document.getElementsByClassName('product');
+var productCorb = [];
+let check = -1;
+let count = 0;
+
+const purchase = function() {
+
+      if (basket.style.display =='none' || total.style.display =='none') {
+      basket.style.display='block';
+      total.style.display='block';
+      }
+
+      check = productCorb.indexOf(this.parentNode.id);
+      
+      
+      if (check == -1) {
+ 
+      corb = document.createElement('div')
+      
+      corb.id = this.parentNode.id;
+      corb.style.width ='400px';
+      corb.style.height ='20px';
+      corb.style.background ='white';
+      corb.style.display ='block';
+      corb.style.margin = '10px';
+      corb.style.padding ='2px';
+      basket.appendChild(corb);
+      productCorb.push(corb.id);
+      price = parseInt(this.parentElement.getElementsByClassName('product__price')[0].innerHTML.replace(/\D+/g,""));
+      totalPrice = totalPrice + price;
+      corb.innerHTML = price;
+      count = 1;
+     
+     } else {
+          price = parseInt(this.parentElement.getElementsByClassName('product__price')[0].innerHTML.replace(/\D+/g,""));
+          console.log(price);
+          count = count + 1;
+          console.log(count);
+          totalPrice = totalPrice + price;
+          priceLast = price * count;
+          corb.id = basket.this.id;
+          corb.innerHTML = priceLast;
+          console.log(corb);
+          
+     }
+ 
+total.innerHTML = totalPrice;
+}
+
+
+for (var i = 0; i < buttons.length; i++) {
+buttons[i].addEventListener('click', purchase)
+}
+
+
+
+//for (var i = 0; i < buttons.length; i++) {
+//buttons[i].addEventListener('click', function() {
+   // alert('hey');
+ // if (this.parentNode.classList.contains('special-offer')) {
+  //  alert('special offer');
+ // } else {
+    //  alert('button is clicked');
+ //   }
+//  });
+//}
+
+
+
+
+//const buttonsSpecial = document.querySelectorAll('.special-offer > button');
+
+//for (var i = 0; i < buttons.length; i++) {
+//buttons[i].addEventListener('click', function() {
+ // alert('hey');
+ // if (this.parentNode.classList.contains('special-offer')) {
+  //  alert('special offer');
+//}
+
+//});
+//}
+
+
+
+</script>
+	
+</body>
+</html>
+
