@@ -101,8 +101,8 @@ let count = 0;
 const purchase = function() {
 
       if (basket.style.display =='none' || total.style.display =='none') {
-      basket.style.display='block';
-      total.style.display='block';
+          basket.style.display='block';
+          total.style.display='block';
       }
 
       check = productCorb.indexOf(this.parentNode.id);
@@ -113,6 +113,7 @@ const purchase = function() {
       corb = document.createElement('div')
       
       corb.id = this.parentNode.id;
+      corb.className = 'corb';
       corb.style.width ='400px';
       corb.style.height ='20px';
       corb.style.background ='white';
@@ -127,15 +128,14 @@ const purchase = function() {
       count = 1;
      
      } else {
-          price = parseInt(this.parentElement.getElementsByClassName('product__price')[0].innerHTML.replace(/\D+/g,""));
-          console.log(price);
-          count = count + 1;
-          console.log(count);
+          price = parseInt(this.parentElement.getElementsByClassName('product__price')[0].innerHTML.replace(/\D+/g,""));         
+          count = count + 1;          
           totalPrice = totalPrice + price;
           priceLast = price * count;
-          corb.id = basket.this.id;
-          corb.innerHTML = priceLast;
-          console.log(corb);
+          
+          var r = basket.getElementsByClassName('corb');                
+         corb.innerHTML = priceLast;
+          console.log(r);
           
      }
  
@@ -147,33 +147,6 @@ for (var i = 0; i < buttons.length; i++) {
 buttons[i].addEventListener('click', purchase)
 }
 
-
-
-//for (var i = 0; i < buttons.length; i++) {
-//buttons[i].addEventListener('click', function() {
-   // alert('hey');
- // if (this.parentNode.classList.contains('special-offer')) {
-  //  alert('special offer');
- // } else {
-    //  alert('button is clicked');
- //   }
-//  });
-//}
-
-
-
-
-//const buttonsSpecial = document.querySelectorAll('.special-offer > button');
-
-//for (var i = 0; i < buttons.length; i++) {
-//buttons[i].addEventListener('click', function() {
- // alert('hey');
- // if (this.parentNode.classList.contains('special-offer')) {
-  //  alert('special offer');
-//}
-
-//});
-//}
 
 
 
