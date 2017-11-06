@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
-	<title>JS Lesson 2</title>
+	<title>Flash</title>
 </head>
 <body>
 
@@ -31,19 +31,30 @@ color[3] = '#FFFF00';
 
 
 const flash = function(element, currState, stopOn) {
-    if  (currState) {
-        	element[0].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+
+          function compareRandom(a, b) {
+          return Math.random() - 0.5;
+          }
+
+          color.sort(compareRandom);
+
+          element[0].style.backgroundColor = color[0];
+          element[1].style.backgroundColor = color[1];
+          element[2].style.backgroundColor = color[2];
+          element[3].style.backgroundColor = color[3];
+    /*if  (currState) {*/
+        	/*element[0].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
         	element[1].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
         	element[2].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
-        	element[3].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
+        	element[3].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];*/
 
-        } else {
+       /* } *//*else {
    
    			element[0].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
    			element[1].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
         	element[2].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
         	element[3].style.backgroundColor = color[Math.round (0 + Math.random() * (3 - 0 + 1))];
-   }
+   }*/
 
    console.log(element[0].style.backgroundColor);
 
@@ -55,7 +66,7 @@ const flash = function(element, currState, stopOn) {
        
 }
 
-flash(element, false, 20);
+flash(element, false, 50);
 
 
 
