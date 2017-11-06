@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New project</title>
+	<style type="text/css">
+
+	body {
+		height: 900px;
+		width: 1300px;
+		background-color: #424242;
+	}
+
+	.container {
+		height: 900px;
+		width: 1310px;
+		font-size: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		
+
+
+
+	}
+
+	.button {
+		display: block;
+		width: 50%;
+		height: 60%;
+		border: 2px solid white;
+		background-color: #0B0B61;
+		
+
+	}
+
+	.button__button {
+		height: 30px;
+		width: 120px;
+		margin: auto;
+    	margin-top: 10%;
+    	margin-left: 40%;
+    	background-color: yellow;
+		
+		
+	}
+
+
+
+	.information {
+		display: block;
+		font-size: 12px;
+		width: 50%;
+		height: 60%;
+		background-color: #0B0B61;
+		border: 2px solid white;
+		
+		color: white;
+	}
+
+	.information__list {
+		
+		width: 100%;
+		max-height: 900px;
+	}
+
+	li {
+		
+		max-height: 900px;
+	}
+
+	/* p {
+	
+		height: 20px;
+		width: 200px; 
+	}
+	 */
+	</style>
+	
+</head>
+<body>
+<div class="container">
+	<div class="button">
+		<button type = "button" id="btn1" class="button__button">Get phones</button>
+		<button type = "button" id="btn2" class="button__button">Get companies</button>
+
+	</div> 
+	<div  class="information">
+		<ol id="company" class="information__list"></ol>
+	</div>
+<!-- <p class="company"></p> -->
+</div>
+
+<!-- <script src = "callbacks.js"></script> -->
+<!-- <script src = "promises.js"></script> -->
+<script src = "ajax.js"></script>
+	
+</body>
+</html>

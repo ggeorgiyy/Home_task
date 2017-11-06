@@ -7,7 +7,7 @@ function initMap() {
 
 /*The are coordinates of the markers below*/
          var position1 = {lat: -25.363, lng: 131.044};
-         var position2 = {lat: 25.363, lng: 130.044};
+         var position2 = {lat: 47.363, lng: 10.044};
          var position3 = {lat: 30.363, lng: 50.044};
          var position4 = {lat: 65.363, lng: 100.044};
 
